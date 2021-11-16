@@ -8,8 +8,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact component={Join} />
-        <Route path="/chat" component={Chat} />
+        <Route path="/" exact element={<Join />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </Router>
   );
