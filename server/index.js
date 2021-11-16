@@ -11,9 +11,12 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
+// user connnecting
 io.on("connection", (socket) => {
   console.log("We have a new connection!");
   
+
+  // user diconnecting
   socket.on('disconnect', () => {
     console.log("User has disconnected");
   })
